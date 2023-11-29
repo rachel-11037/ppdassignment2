@@ -1,0 +1,31 @@
+File Structure
+
+Main Menu file
+-class file: Distance
+-class file: Temperature
+-class file: Volume
+-class file: Mass
+-class file: Area
+
+Testing file
+
+
+
+Adam:
+
+Algorithm
+-class file: Volume 
+-class file: Mass
+-class file: Area
+Including tests for class files
+
+
+Rachel:
+
+Data Dictionary
+Main menu file
+- class file: Distance
+- class file: Temperature
+Including tests for class files
+
+
