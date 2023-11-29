@@ -1,2 +1,2 @@
 # ppdassignment2
-Our project for Programming Principles and Design Assignment 2
+Our project for Programming Principles and Design Assignment 2.
