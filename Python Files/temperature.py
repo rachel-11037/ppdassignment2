@@ -1,4 +1,4 @@
-# temperature class
+# Rachel Gillespie - temperature class
 
 class Temperature:
     def __init__(self,temp):
