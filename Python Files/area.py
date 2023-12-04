@@ -25,4 +25,4 @@ class Area:
 if __name__ == "__main__":
     example1 = Area(100)
     print(f"{example1.area} hectares converted to acres is {example1.convert_hect_to_acr()}")
-    print(f"{example1.area} hectares converted to acres is {example1.convert_hect_to_acr()}")
+    print(f"{example1.area} acres converted to hectares is {example1.convert_hect_to_acr()}")
