@@ -18,9 +18,9 @@
 # Adam:
 
 - [ ] Algorithm
-- [ ] Class file: Volume 
-- [ ] Class file: Mass
-- [ ] Class file: Area
+- [x] Class file: Volume 
+- [x] Class file: Mass
+- [x] Class file: Area
 - [ ] Including tests for the above class files
 
 
