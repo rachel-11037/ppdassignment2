@@ -14,12 +14,12 @@ class Area:
 
     # Acres to Hectares
     def convert_acr_to_hect(self):
-        conversion = (self.area / 2.471)
+        conversion = round((self.area / 2.471), 2)
         return conversion
 
     # Hectares to Acres
     def convert_hect_to_acr(self):
-        conversion = (self.area * 2.471)
+        conversion = round((self.area * 2.471), 2)
         return conversion
 
 if __name__ == "__main__":

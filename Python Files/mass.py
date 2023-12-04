@@ -14,12 +14,12 @@ class Mass:
 
     # Kilogrammes to Stone
     def convert_kg_to_st(self):
-        conversion = (self.mass / 6.35)
+        conversion = round((self.mass / 6.35), 2)
         return conversion
 
     # Stone to Kilogrammes
     def convert_st_to_kg(self):
-        conversion = (self.mass * 6.35)
+        conversion = round((self.mass * 6.35), 2)
         return conversion
 
 

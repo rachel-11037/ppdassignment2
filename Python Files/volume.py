@@ -14,12 +14,12 @@ class Volume:
 
     # Pints to Litres
     def convert_pnt_to_ltr(self):
-        conversion = (self.volume / 1.7598)
+        conversion = round((self.volume / 1.7598), 2)
         return conversion
 
     # Litres to Pints
     def convert_lrt_to_pnt(self):
-        conversion = (self.volume * 1.7598)
+        conversion = round((self.volume * 1.7598), 2)
         return conversion
 
 
