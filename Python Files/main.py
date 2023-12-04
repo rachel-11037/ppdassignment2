@@ -16,6 +16,7 @@ def menu():
     print("+ 6: Quit                           +")
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
 
+
 def distance():
     def convert_miles():
         miles = int(input("Enter, in miles, your measurement:"))
@@ -29,7 +30,6 @@ def distance():
         result = km.convert_km2miles()
         print(f"{km.distance}km = {result} miles.")
 
-    
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Distance Conversion               +")
     print("+ 1. Convert miles to kilometres    +")
@@ -43,6 +43,9 @@ def distance():
         elif user_choice == 2:
             convert_km()
     menu()
+
+def temperature():
+    def convert_far
 def main():
     menu()
 
