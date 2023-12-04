@@ -28,7 +28,7 @@
 
 - [ ] Data Dictionary
 - [ ] Main menu file
-- [ ] Class file: Distance
-- [ ] Class file: Temperature
+- [x] Class file: Distance
+- [x] Class file: Temperature
 - [ ] Including tests for the above class files
 
