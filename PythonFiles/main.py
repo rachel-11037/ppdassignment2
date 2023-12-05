@@ -154,10 +154,24 @@ def volume():
 
 
 def mass():
-    pass
+    def convert_kg2stone():
+        convert_again = True
+        while convert_again:
+            kg = int(input("Enter, in kilograms, your mass:"))
+            kg = Mass(kg)
+            result = kg.convert_kg_to_st()
+            print(f"{kg.mass}kg = {result}st")
+            convert_again = input("Would you like to convert again? y/n:")
+            if convert_again == "y":
+                convert_again = True
+            else:
+                mass()
+
+
 
 def area():
     pass
+
 
 def main():
     menu()
@@ -169,6 +183,13 @@ def main():
             temperature()
         elif user_choice == 3:
             volume()
+        elif user_choice == 4:
+            mass()
+        elif user_choice == 5:
+            area()
+        else:
+            print("Invalid. Try again")
+            main()
     print("Goodbye!")
     quit()
 
