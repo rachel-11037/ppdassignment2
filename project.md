@@ -21,7 +21,7 @@
 - [x] Class file: Volume 
 - [x] Class file: Mass
 - [x] Class file: Area
-- [ ] Including tests for the above class files
+- [x] Including test files for all classes
 
 
 # Rachel:
@@ -30,5 +30,4 @@
 - [ ] Main menu file
 - [x] Class file: Distance
 - [x] Class file: Temperature
-- [ ] Including tests for the above class files
 
