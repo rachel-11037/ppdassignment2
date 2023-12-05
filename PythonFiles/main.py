@@ -53,12 +53,14 @@ def distance():
     print("+ 3. Back to main menu              +")
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     user_choice = int(input("Select your choice:"))
-    if user_choice == 1:
-        convert_miles()
-    elif user_choice == 2:
-        convert_km()
-    else:
-        main()
+    while user_choice != 3:
+        if user_choice == 1:
+            convert_miles()
+        elif user_choice == 2:
+            convert_km()
+        else:
+            print("Invalid. Try again.")
+    main()
 
 def temperature():
     def convert_far():
@@ -66,8 +68,10 @@ def temperature():
 def main():
     menu()
     user_choice = int(input("Type the number corresponding to your choice and press enter:"))
-    while user_choice != 3:
+    while user_choice != 6:
         if user_choice == 1:
             distance()
+        elif user_choice == 2:
+            temperature()
 
 main()
