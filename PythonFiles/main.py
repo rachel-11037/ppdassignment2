@@ -59,6 +59,7 @@ def distance():
             convert_km()
         else:
             print("Invalid. Try again.")
+            distance()
     main()
 
 
@@ -104,7 +105,7 @@ def temperature():
             convert_cel2far()
         else:
             print("Invalid. Try again")
-            user_choice = int(input("Type the number corresponding to your choice and press enter:"))
+            temperature()
     main()
 
 
@@ -149,12 +150,12 @@ def volume():
             convert_ltr2pnt()
         else:
             print("Invalid. Try again")
-            user_choice = int(input("Type the number corresponding to your choice and press enter:"))
+            volume()
     main()
 
 
 def mass():
-    def convert_kg2stone():
+    def convert_kg2st():
         convert_again = True
         while convert_again:
             kg = int(input("Enter, in kilograms, your mass:"))
@@ -167,12 +168,43 @@ def mass():
             else:
                 mass()
 
+    def convert_st2kg():
+        convert_again = True
+        while convert_again:
+            st = int(input("Enter, in stone, your mass:"))
+            st = Mass(st)
+            result = st.convert_kg_to_st()
+            print(f"{st.mass}st = {result}kg")
+            convert_again = input("Would you like to convert again? y/n:")
+            if convert_again == "y":
+                convert_again = True
+            else:
+                mass()
+
+    print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
+    print("+ Mass (Weight) Conversion          +")
+    print("+ 1. Convert Kilograms to Stone     +")
+    print("+ 2. Convert Stone to Kilograms     +")
+    print("+ 3. Back to Main Menu              +")
+    print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
+    user_choice = int(input("Type the number corresponding to your choice and press enter:"))
+    while user_choice != 3:
+        if user_choice == 1:
+            convert_kg2st()
+        elif user_choice == 2:
+            convert_st2kg()
+        else:
+            print("Invalid. Try again")
+            mass()
 
 
 def area():
-    pass
+    def convert_acres2hctres():
+        pass
 
 
+# TODO I'm gonna try and make lines 211 to 224 a bit cleaner. The while loop helps but I feel like it can be a bit
+#  better
 def main():
     menu()
     user_choice = int(input("Type the number corresponding to your choice and press enter:"))
