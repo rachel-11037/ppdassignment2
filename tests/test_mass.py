@@ -1,3 +1,5 @@
+from ..PythonFiles.mass import Mass
+
 def test_convert_kg_to_st():
     assert False
 

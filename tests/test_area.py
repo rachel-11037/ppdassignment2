@@ -1,3 +1,5 @@
+from ..PythonFiles.area import Area
+
 def test_convert_acr_to_hect():
     assert False
 
