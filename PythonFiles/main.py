@@ -108,6 +108,57 @@ def temperature():
     main()
 
 
+def volume():
+    def convert_pnt2ltr():
+        convert_again = True
+        while convert_again:
+            pint = int(input("Enter, in pints, your volume:"))
+            pint = Volume(pint)
+            result = pint.convert_pnt_to_ltr()
+            print(f"{pint.volume} pints = {result}l")
+            convert_again = input("Would you like to convert again? y/n:")
+            if convert_again == "y":
+                convert_again = True
+            else:
+                volume()
+
+    def convert_ltr2pnt():
+        convert_again = True
+        while convert_again:
+            ltr = int(input("Enter, in litres, your volume:"))
+            ltr = Volume(ltr)
+            result = ltr.convert_lrt_to_pnt()
+            print(f"{ltr.volume}l = {result} pints")
+            convert_again = input("Would you like to convert again? y/n:")
+            if convert_again == "y":
+                convert_again = True
+            else:
+                volume()
+
+    print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
+    print("+ Volume Conversion                 +")
+    print("+ 1. Convert Pints to Litres        +")
+    print("+ 2. Convert Litres to Pints        +")
+    print("+ 3. Back to Main Menu              +")
+    print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
+    user_choice = int(input("Type the number corresponding to your choice and press enter:"))
+    while user_choice != 3:
+        if user_choice == 1:
+            convert_pnt2ltr()
+        elif user_choice == 2:
+            convert_ltr2pnt()
+        else:
+            print("Invalid. Try again")
+            user_choice = int(input("Type the number corresponding to your choice and press enter:"))
+    main()
+
+
+def mass():
+    pass
+
+def area():
+    pass
+
 def main():
     menu()
     user_choice = int(input("Type the number corresponding to your choice and press enter:"))
@@ -116,8 +167,11 @@ def main():
             distance()
         elif user_choice == 2:
             temperature()
+        elif user_choice == 3:
+            volume()
     print("Goodbye!")
     quit()
 
 
-main()
+if __name__ == "__main__":
+    main()
