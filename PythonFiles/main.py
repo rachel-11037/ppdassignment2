@@ -5,7 +5,7 @@ from mass import Mass
 from area import Area
 
 
-# menu function
+# main menu function, to conserve space and improve performance
 def menu():
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Welcome to the conversion tool!   +")
@@ -76,18 +76,37 @@ def temperature():
             else:
                 temperature()
 
+    def convert_cel2far():
+        convert_again = True
+        while convert_again:
+            cel = int(input("Enter, in °C, your temperature:"))
+            cel = Temperature(cel)
+            result = cel.convert_cel2far()
+            print(f"{cel.temp}°C = {result}°F")
+            convert_again = input("Would you like to convert again? y/n:")
+            if convert_again == "y":
+                convert_again = True
+            else:
+                temperature()
+
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Temperature Conversion            +")
     print("+ 1. Fahrenheit to Celsius          +")
     print("+ 2. Celsius to Fahrenheit          +")
-    print("+ Back to main menu                 +")
+    print("+ 3. Back to main menu              +")
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
 
     user_choice = int(input("Type the number corresponding to your choice and press enter:"))
     while user_choice != 3:
         if user_choice == 1:
             convert_far2cel()
+        elif user_choice == 2:
+            convert_cel2far()
+        else:
+            print("Invalid. Try again")
+            user_choice = int(input("Type the number corresponding to your choice and press enter:"))
     main()
+
 
 def main():
     menu()
@@ -99,5 +118,6 @@ def main():
             temperature()
     print("Goodbye!")
     quit()
+
 
 main()
