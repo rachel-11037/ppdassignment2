@@ -4,7 +4,7 @@ from volume import Volume
 from mass import Mass
 from area import Area
 
-
+# menu function
 def menu():
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Welcome to the conversion tool!   +")
@@ -19,16 +19,32 @@ def menu():
 
 def distance():
     def convert_miles():
-        miles = int(input("Enter, in miles, your measurement:"))
-        miles = Distance(miles)
-        result = miles.convert_miles2km()
-        print(f"{miles.distance} miles = {result}km.")
+        convert_again = True
+        while convert_again:
+            miles = int(input("Enter, in miles, your measurement:"))
+            miles = Distance(miles)
+            result = miles.convert_miles2km()
+            print(f"{miles.distance} miles = {result}km.")
+            convert_again = input("Would you like to convert again? y/n:")
+            if convert_again == "y":
+                convert_again = True
+            else:
+                distance()
+
 
     def convert_km():
-        km = int(input("Enter, in kilometres, your measurement:"))
-        km = Distance(km)
-        result = km.convert_km2miles()
-        print(f"{km.distance}km = {result} miles.")
+        convert_again = True
+        while convert_again:
+            km = int(input("Enter, in kilometres, your measurement:"))
+            km = Distance(km)
+            result = km.convert_km2miles()
+            print(f"{km.distance}km = {result} miles.")
+            convert_again = input("Would you like to convert again? y/n:")
+            if convert_again == "y":
+                convert_again = True
+            else:
+                distance()
+
 
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Distance Conversion               +")
@@ -37,17 +53,21 @@ def distance():
     print("+ 3. Back to main menu              +")
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     user_choice = int(input("Select your choice:"))
-    while user_choice != 3:
-        if user_choice == 1:
-            convert_miles()
-        elif user_choice == 2:
-            convert_km()
-    menu()
+    if user_choice == 1:
+        convert_miles()
+    elif user_choice == 2:
+        convert_km()
+    else:
+        main()
 
 def temperature():
-    def convert_far
+    def convert_far():
+        pass
 def main():
     menu()
-
+    user_choice = int(input("Type the number corresponding to your choice and press enter:"))
+    while user_choice != 3:
+        if user_choice == 1:
+            distance()
 
 main()
