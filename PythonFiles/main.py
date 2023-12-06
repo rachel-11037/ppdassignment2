@@ -97,7 +97,7 @@ def temperature():
     print("+ 3. Back to main menu              +")
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
 
-    user_choice = int(input("Type the number corresponding to your choice and press enter:"))
+    user_choice = int(input("Enter your choice:"))
     while user_choice != 3:
         if user_choice == 1:
             convert_far2cel()
@@ -142,7 +142,7 @@ def volume():
     print("+ 2. Convert Litres to Pints        +")
     print("+ 3. Back to Main Menu              +")
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
-    user_choice = int(input("Type the number corresponding to your choice and press enter:"))
+    user_choice = int(input("Enter your choice:"))
     while user_choice != 3:
         if user_choice == 1:
             convert_pnt2ltr()
@@ -187,7 +187,7 @@ def mass():
     print("+ 2. Convert Stone to Kilograms     +")
     print("+ 3. Back to Main Menu              +")
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
-    user_choice = int(input("Type the number corresponding to your choice and press enter:"))
+    user_choice = int(input("Enter your choice:"))
     while user_choice != 3:
         if user_choice == 1:
             convert_kg2st()
@@ -196,18 +196,59 @@ def mass():
         else:
             print("Invalid. Try again")
             mass()
+    main()
 
 
 def area():
-    def convert_acres2hctres():
-        pass
+    def convert_acres2hect():
+        convert_again = True
+        while convert_again:
+            acres = int(input("Enter, in acres, your area:"))
+            acres = Area(acres)
+            result = acres.convert_acr_to_hect()
+            print(f"{acres.area} acres = {result} hectares")
+            convert_again = input("Would you like to convert again? y/n")
+            if convert_again == "y":
+                convert_again = True
+            else:
+                area()
 
+    def convert_hect2acres():
+        convert_again = True
+        while convert_again:
+            hect = int(input("Enter, in hectares, your area:"))
+            hect = Area(hect)
+            result = hect.convert_hect_to_acr()
+            print(f"{hect.area} hectares = {result} acres")
+            convert_again = input("Would you like to convert again? y/n")
+            if convert_again == "y":
+                convert_again = True
+            else:
+                area()
+        area()
+
+    print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
+    print("+ Area Conversion                   +")
+    print("+ 1. Convert Acres to Hectares      +")
+    print("+ 2. Convert Hectares to Acres      +")
+    print("+ 3. Back to Main Menu              +")
+    print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
+    user_choice = int(input("Enter your choice:"))
+    while user_choice != 3:
+        if user_choice == 1:
+            convert_acres2hect()
+        elif user_choice == 2:
+            convert_hect2acres()
+        else:
+            print("Invalid. Try again")
+            area()
+    main()
 
 # TODO I'm gonna try and make lines 211 to 224 a bit cleaner. The while loop helps but I feel like it can be a bit
 #  better
 def main():
     menu()
-    user_choice = int(input("Type the number corresponding to your choice and press enter:"))
+    user_choice = int(input("Enter your choice:"))
     while user_choice != 6:
         if user_choice == 1:
             distance()
