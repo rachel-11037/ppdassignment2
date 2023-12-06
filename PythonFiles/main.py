@@ -244,6 +244,7 @@ def area():
             area()
     main()
 
+
 # TODO I'm gonna try and make lines 211 to 224 a bit cleaner. The while loop helps but I feel like it can be a bit
 #  better
 def main():
