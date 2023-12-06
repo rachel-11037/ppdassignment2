@@ -17,7 +17,7 @@
 
 # Adam:
 
-- [ ] Algorithm
+- [x] Algorithm - Pseudocode
 - [x] Class file: Volume 
 - [x] Class file: Mass
 - [x] Class file: Area
@@ -26,7 +26,7 @@
 
 # Rachel:
 
-- [ ] Data Dictionary
+- [ ] Algorithm - Data Dictionary
 - [x] Main menu file
 - [x] Class file: Distance
 - [x] Class file: Temperature
