@@ -17,7 +17,7 @@
 
 # Adam:
 
-- [ ] Algorithm
+- [x] Algorithm
 - [x] Class file: Volume 
 - [x] Class file: Mass
 - [x] Class file: Area
