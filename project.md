@@ -27,7 +27,7 @@
 # Rachel:
 
 - [ ] Data Dictionary
-- [ ] Main menu file
+- [x] Main menu file
 - [x] Class file: Distance
 - [x] Class file: Temperature
 
