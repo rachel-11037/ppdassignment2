@@ -20,40 +20,44 @@ def menu():
 
 def distance():
     def convert_miles():
-        convert_again = True
-        while convert_again:
+        try:
+            miles = float(input("Enter, in miles, your measurement:"))
+        except ValueError:
+            print("Sorry, you have not entered an integer/float value. Please try again.")
+        else:
+            miles = Distance(miles)
+            result = miles.convert_miles2km()
+            print(f"{miles.distance} miles = {result}km.")
+
             while True:
-                try:
-                    miles = float(input("Enter, in miles, your measurement:"))
-                except ValueError:
-                    print("Sorry, you have not entered an integer/float value. Please try again.")
+                convert_input = input("Would you like to convert again? y/n:")
+                if convert_input == "y":
+                    break
+                elif convert_input == "n":
+                    distance()
                 else:
-                    miles = Distance(miles)
-                    result = miles.convert_miles2km()
-                    print(f"{miles.distance} miles = {result}km.")
-                    convert_again = input("Would you like to convert again? y/n:")
-                    if convert_again == "y":
-                        convert_again = True
-                    else:
-                        distance()
+                    print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.")
+                    continue
 
     def convert_km():
-        convert_again = True
-        while convert_again:
+        try:
+            km = float(input("Enter, in kilometres, your measurement:"))
+        except ValueError:
+            print("Sorry, you have not entered an integer/float value. Please try again.")
+        else:
+            km = Distance(km)
+            result = km.convert_km2miles()
+            print(f"{km.distance}km = {result} miles.")
+
             while True:
-                try:
-                    km = float(input("Enter, in kilometres, your measurement:"))
-                except ValueError:
-                    print("Sorry, you have not entered an integer/float value. Please try again.")
+                convert_input = input("Would you like to convert again? y/n:")
+                if convert_input == "y":
+                    break
+                elif convert_input == "n":
+                    distance()
                 else:
-                    km = Distance(km)
-                    result = km.convert_km2miles()
-                    print(f"{km.distance}km = {result} miles.")
-                    convert_again = input("Would you like to convert again? y/n:")
-                    if convert_again == "y":
-                        convert_again = True
-                    else:
-                        distance()
+                    print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.")
+                    continue
 
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Distance Conversion               +")
@@ -81,40 +85,44 @@ def distance():
 
 def temperature():
     def convert_far2cel():
-        convert_again = True
-        while convert_again:
+        try:
+            far = float(input("Enter, in °F, your temperature:"))
+        except ValueError:
+            print("Sorry, you have not entered an integer/float value. Please try again.")
+        else:
+            far = Temperature(far)
+            result = far.convert_far2cel()
+            print(f"{far.temp}°F = {result}°C")
+
             while True:
-                try:
-                    far = float(input("Enter, in °F, your temperature:"))
-                except ValueError:
-                    print("Sorry, you have not entered an integer/float value. Please try again.")
+                convert_input = input("Would you like to convert again? y/n:")
+                if convert_input == "y":
+                    break
+                elif convert_input == "n":
+                    temperature()
                 else:
-                    far = Temperature(far)
-                    result = far.convert_far2cel()
-                    print(f"{far.temp}°F = {result}°C")
-                    convert_again = input("Would you like to convert again? y/n:")
-                    if convert_again == "y":
-                        convert_again = True
-                    else:
-                        temperature()
+                    print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.")
+                    continue
 
     def convert_cel2far():
-        convert_again = True
-        while convert_again:
+        try:
+            cel = float(input("Enter, in °C, your temperature:"))
+        except ValueError:
+            print("Sorry, you have not entered an integer/float value. Please try again.")
+        else:
+            cel = Temperature(cel)
+            result = cel.convert_cel2far()
+            print(f"{cel.temp}°C = {result}°F")
+
             while True:
-                try:
-                    cel = float(input("Enter, in °C, your temperature:"))
-                except ValueError:
-                    print("Sorry, you have not entered an integer/float value. Please try again.")
+                convert_input = input("Would you like to convert again? y/n:")
+                if convert_input == "y":
+                    break
+                elif convert_input == "n":
+                    temperature()
                 else:
-                    cel = Temperature(cel)
-                    result = cel.convert_cel2far()
-                    print(f"{cel.temp}°C = {result}°F")
-                    convert_again = input("Would you like to convert again? y/n:")
-                    if convert_again == "y":
-                        convert_again = True
-                    else:
-                        temperature()
+                    print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.")
+                    continue
 
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Temperature Conversion            +")
@@ -142,40 +150,44 @@ def temperature():
 
 def volume():
     def convert_pnt2ltr():
-        convert_again = True
-        while convert_again:
+        try:
+            pint = float(input("Enter, in pints, your volume:"))
+        except ValueError:
+            print("Sorry, you have not entered an integer/float value. Please try again.")
+        else:
+            pint = Volume(pint)
+            result = pint.convert_pnt_to_ltr()
+            print(f"{pint.volume} pints = {result}l")
+
             while True:
-                try:
-                    pint = float(input("Enter, in pints, your volume:"))
-                except ValueError:
-                    print("Sorry, you have not entered an integer/float value. Please try again.")
+                convert_input = input("Would you like to convert again? y/n:")
+                if convert_input == "y":
+                    break
+                elif convert_input == "n":
+                    volume()
                 else:
-                    pint = Volume(pint)
-                    result = pint.convert_pnt_to_ltr()
-                    print(f"{pint.volume} pints = {result}l")
-                    convert_again = input("Would you like to convert again? y/n:")
-                    if convert_again == "y":
-                        convert_again = True
-                    else:
-                        volume()
+                    print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.")
+                    continue
 
     def convert_ltr2pnt():
-        convert_again = True
-        while convert_again:
+        try:
+            ltr = float(input("Enter, in litres, your volume:"))
+        except ValueError:
+            print("Sorry, you have not entered an integer/float value. Please try again.")
+        else:
+            ltr = Volume(ltr)
+            result = ltr.convert_lrt_to_pnt()
+            print(f"{ltr.volume}l = {result} pints")
+
             while True:
-                try:
-                    ltr = float(input("Enter, in litres, your volume:"))
-                except ValueError:
-                    print("Sorry, you have not entered an integer/float value. Please try again.")
+                convert_input = input("Would you like to convert again? y/n:")
+                if convert_input == "y":
+                    break
+                elif convert_input == "n":
+                    volume()
                 else:
-                    ltr = Volume(ltr)
-                    result = ltr.convert_lrt_to_pnt()
-                    print(f"{ltr.volume}l = {result} pints")
-                    convert_again = input("Would you like to convert again? y/n:")
-                    if convert_again == "y":
-                        convert_again = True
-                    else:
-                        volume()
+                    print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.")
+                    continue
 
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Volume Conversion                 +")
@@ -203,40 +215,44 @@ def volume():
 
 def mass():
     def convert_kg2st():
-        convert_again = True
-        while convert_again:
+        try:
+            kg = float(input("Enter, in kilograms, your mass:"))
+        except ValueError:
+            print("Sorry, you have not entered an integer/float value. Please try again.")
+        else:
+            kg = Mass(kg)
+            result = kg.convert_kg_to_st()
+            print(f"{kg.mass}kg = {result}st")
+
             while True:
-                try:
-                    kg = float(input("Enter, in kilograms, your mass:"))
-                except ValueError:
-                    print("Sorry, you have not entered an integer/float value. Please try again.")
+                convert_input = input("Would you like to convert again? y/n:")
+                if convert_input == "y":
+                    break
+                elif convert_input == "n":
+                    mass()
                 else:
-                    kg = Mass(kg)
-                    result = kg.convert_kg_to_st()
-                    print(f"{kg.mass}kg = {result}st")
-                    convert_again = input("Would you like to convert again? y/n:")
-                    if convert_again == "y":
-                        convert_again = True
-                    else:
-                        mass()
+                    print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.")
+                    continue
 
     def convert_st2kg():
-        convert_again = True
-        while convert_again:
+        try:
+            st = float(input("Enter, in stone, your mass:"))
+        except ValueError:
+            print("Sorry, you have not entered an integer/float value. Please try again.")
+        else:
+            st = Mass(st)
+            result = st.convert_kg_to_st()
+            print(f"{st.mass}st = {result}kg")
+
             while True:
-                try:
-                    st = float(input("Enter, in stone, your mass:"))
-                except ValueError:
-                    print("Sorry, you have not entered an integer/float value. Please try again.")
+                convert_input = input("Would you like to convert again? y/n:")
+                if convert_input == "y":
+                    break
+                elif convert_input == "n":
+                    mass()
                 else:
-                    st = Mass(st)
-                    result = st.convert_kg_to_st()
-                    print(f"{st.mass}st = {result}kg")
-                    convert_again = input("Would you like to convert again? y/n:")
-                    if convert_again == "y":
-                        convert_again = True
-                    else:
-                        mass()
+                    print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.")
+                    continue
 
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Mass (Weight) Conversion          +")
@@ -264,41 +280,44 @@ def mass():
 
 def area():
     def convert_acres2hect():
-        convert_again = True
-        while convert_again:
+        try:
+            acres = float(input("Enter, in acres, your area:"))
+        except ValueError:
+            print("Sorry, you have not entered an integer/float value. Please try again.")
+        else:
+            acres = Area(acres)
+            result = acres.convert_acr_to_hect()
+            print(f"{acres.area} acres = {result} hectares")
+
             while True:
-                try:
-                    acres = float(input("Enter, in acres, your area:"))
-                except ValueError:
-                    print("Sorry, you have not entered an integer/float value. Please try again.")
+                convert_input = input("Would you like to convert again? y/n:")
+                if convert_input == "y":
+                    break
+                elif convert_input == "n":
+                    area()
                 else:
-                    acres = Area(acres)
-                    result = acres.convert_acr_to_hect()
-                    print(f"{acres.area} acres = {result} hectares")
-                    convert_again = input("Would you like to convert again? y/n")
-                    if convert_again == "y":
-                        convert_again = True
-                    else:
-                        area()
+                    print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.")
+                    continue
 
     def convert_hect2acres():
-        convert_again = True
-        while convert_again:
+        try:
+            hect = float(input("Enter, in hectares, your area:"))
+        except ValueError:
+            print("Sorry, you have not entered an integer/float value. Please try again.")
+        else:
+            hect = Area(hect)
+            result = hect.convert_hect_to_acr()
+            print(f"{hect.area} hectares = {result} acres")
+
             while True:
-                try:
-                    hect = float(input("Enter, in hectares, your area:"))
-                except ValueError:
-                    print("Sorry, you have not entered an integer/float value. Please try again.")
+                convert_input = input("Would you like to convert again? y/n:")
+                if convert_input == "y":
+                    break
+                elif convert_input == "n":
+                    area()
                 else:
-                    hect = Area(hect)
-                    result = hect.convert_hect_to_acr()
-                    print(f"{hect.area} hectares = {result} acres")
-                    convert_again = input("Would you like to convert again? y/n")
-                    if convert_again == "y":
-                        convert_again = True
-                    else:
-                        area()
-                area()
+                    print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.")
+                    continue
 
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Area Conversion                   +")
