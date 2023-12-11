@@ -3,8 +3,8 @@
 - Documents
   - Pseudocode
   - data_dictionary
-  - #TODO: Teamwork Document: with evidence including screenshots of team discussions, individual effort (project.md + commits)
-  - #TODO: Document: Screenshots of working program including tests of program
+  - Teamwork Document
+  - Testing & Screenshots Document
 - PythonFiles
   - __ pycache __
   - __ init__ .py
