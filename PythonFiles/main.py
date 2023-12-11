@@ -61,9 +61,9 @@ def distance():
 
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Distance Conversion               +")
-    print("+ 1. Convert miles to kilometres    +")
-    print("+ 2. Convert kilometres to miles    +")
-    print("+ 3. Back to main menu              +")
+    print("+ 1. Convert Miles to Kilometres    +")
+    print("+ 2. Convert Kilometres to Miles    +")
+    print("+ 3. Back to Main Menu              +")
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     while True:
         try:
@@ -126,9 +126,9 @@ def temperature():
 
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Temperature Conversion            +")
-    print("+ 1. Fahrenheit to Celsius          +")
-    print("+ 2. Celsius to Fahrenheit          +")
-    print("+ 3. Back to main menu              +")
+    print("+ 1. Convert Fahrenheit to Celsius  +")
+    print("+ 2. Convert Celsius to Fahrenheit  +")
+    print("+ 3. Back to Main Menu              +")
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     while True:
         try:
