@@ -41,7 +41,7 @@
 
 # Rachel:
 
-- [ ] Algorithm - Data Dictionary
+- [x] Algorithm - Data Dictionary
 - [x] Main menu file
 - [x] Class file: Distance
 - [x] Class file: Temperature
