@@ -12,11 +12,11 @@ class Distance:
     def distance(self,value):
         self._distance = value
 
-    def convert_miles2km(self):
+    def convert_miles2km(self): # convert miles to kilometres
         result = round(float(self._distance*1.609), 2)
         return result
     
-    def convert_km2miles(self):
+    def convert_km2miles(self): # convert kilometres to miles
         result = round(float(self._distance/1.609), 2)
         return result
 
