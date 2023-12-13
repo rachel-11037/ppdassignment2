@@ -12,11 +12,11 @@ class Temperature:
     def temp(self, value):
         self._temp = value
 
-    def convert_cel2far(self):
+    def convert_cel2far(self): # convert °C to °F
         result = float((self.temp*9/5) + 32)
         return result
     
-    def convert_far2cel(self):
+    def convert_far2cel(self): # convert °F to °C
         result = float((self.temp - 32)*5/9)
         return result
 
