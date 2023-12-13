@@ -22,6 +22,6 @@ class Distance:
 
 
 if __name__ == "__main__":
-    dist1 = Distance(200)
+    dist1 = Distance(200) # this is a dummy distance to test the class.
     print(f"{dist1.distance} miles to kilometres = {dist1.convert_miles2km()}")
     print(f"{dist1.distance} kilometres to miles = {dist1.convert_km2miles()}")
