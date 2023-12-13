@@ -348,7 +348,7 @@ def area():
     main()
 
 
-# Main Menu Function. The menu is called within this funtion to conserve space.
+# Main Menu Function. The menu is called within this function to conserve space.
 def main():
     menu()
     while True:
