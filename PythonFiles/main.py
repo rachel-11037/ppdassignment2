@@ -19,13 +19,15 @@ def menu():
     print("+ 6: Quit                           +")
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
 
-
+# each master function has 2 inner functions for each conversion. 
 def distance():
     def convert_miles():
+        # all functions use a try/except command to verify the inputs. This can be seen through every function, except for
+        # menu().
         try:
             miles = float(input("Enter, in miles, your measurement:"))
         except ValueError:
-            print("Sorry, you have not entered an integer/float value. Please try again.")
+            print("Sorry, you have not entered an integer/float value. Please try again.") # this will loop until a number is entered.
         else:
             miles = Distance(miles)
             result = miles.convert_miles2km()
@@ -38,7 +40,7 @@ def distance():
                 elif convert_input == "n":
                     distance()
                 else:
-                    print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.")
+                    print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.") # this will loop until either 'y' or 'n' is entered.
                     continue
 
     def convert_km():
@@ -60,7 +62,8 @@ def distance():
                 else:
                     print("Sorry, only the values 'y' (yes) and 'n' (no) are accepted. Please try again.")
                     continue
-
+                    
+    # the menu for each conversion is contained in the master function. It includes an option to exit and return to the main menu.
     print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
     print("+ Distance Conversion               +")
     print("+ 1. Convert Miles to Kilometres    +")
@@ -345,7 +348,7 @@ def area():
     main()
 
 
-# Main Menu Function
+# Main Menu Function. The menu is called within this funtion to conserve space.
 def main():
     menu()
     while True:
@@ -370,7 +373,7 @@ def main():
             print("Invalid. Try again")
             main()
     print("Goodbye!")
-    quit()
+    quit() # if the number 6 is entered, the program will quit.
 
 
 if __name__ == "__main__":
