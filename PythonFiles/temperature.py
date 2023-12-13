@@ -22,6 +22,6 @@ class Temperature:
 
 
 if __name__ == "__main__":
-    temp1 = Temperature(50)
+    temp1 = Temperature(50) # this is a dummy temperature to test the class.
     print(f"{temp1.temp}°C = {temp1.convert_cel2far()}°F")
     print(f"{temp1.temp}°F = {temp1.convert_far2cel()}°C")
